@@ -57,7 +57,7 @@ Contributing
 Contributions to this project are welcome! If you find any issues or have suggestions for improvements, feel free to open an issue or submit a pull request on GitHub.
 
 License
-This project is licensed under the MIT License. You are free to use, modify, and distribute the code without any restrictions. See the LICENSE file for details.
+You are free to use, modify, and distribute the code without any restrictions. See the LICENSE file for details.
 
 Contact
 If you have any questions or need further assistance, feel free to contact me on LinkedIn: Arizakmoh.
