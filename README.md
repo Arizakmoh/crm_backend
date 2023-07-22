@@ -60,7 +60,7 @@ License
 You are free to use, modify, and distribute the code without any restrictions. See the LICENSE file for details.
 
 Contact
-If you have any questions or need further assistance, feel free to contact me on LinkedIn: Arizakmoh.
+If you have any questions or need further assistance, feel free to contact me on LinkedIn: (https://www.linkedin.com/in/arizakmoh/.).
 
 Thank you for using the CRM Backend project. I hope it helps you build a robust CRM system with ease! Happy coding!
 
