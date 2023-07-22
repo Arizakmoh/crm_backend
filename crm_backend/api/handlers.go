@@ -10,13 +10,13 @@ import (
 	"github.com/gorilla/mux"
 )
 
-// API 1
+// API 1 - Get All Customers
 func getCustomers(w http.ResponseWriter, r *http.Request) {
 	w.Header().Set("Content-Type", "application/json")
 	json.NewEncoder(w).Encode(database.Customers)
 }
 
-// API 2
+// API 2 - Get Customer by ID
 func getCustomer(w http.ResponseWriter, r *http.Request) {
 	w.Header().Set("Content-Type", "application/json")
 	params := mux.Vars(r)
@@ -37,7 +37,7 @@ func getCustomer(w http.ResponseWriter, r *http.Request) {
 	fmt.Fprintf(w, `{"error": "Customer not found"}`)
 }
 
-// API 3
+// API 3 -- Post New Customer
 func addCustomer(w http.ResponseWriter, r *http.Request) {
 	w.Header().Set("Content-Type", "application/json")
 	fmt.Println("Received Create Request")
@@ -63,7 +63,7 @@ func generateNewID() string {
 	return uniqueID
 }
 
-// API 4
+// API 4 - Update Customer
 func updateCustomer(w http.ResponseWriter, r *http.Request) {
 	w.Header().Set("Content-Type", "application/json")
 	params := mux.Vars(r)
@@ -94,7 +94,7 @@ func updateCustomer(w http.ResponseWriter, r *http.Request) {
 	fmt.Fprintf(w, `{"error": "Customer not found"}`)
 }
 
-// API 5
+// API 5 -- Detelete Customer
 func deleteCustomer(w http.ResponseWriter, r *http.Request) {
 	w.Header().Set("Content-Type", "application/json")
 	params := mux.Vars(r)
