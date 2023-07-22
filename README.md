@@ -35,7 +35,7 @@ The CRM Backend API can be accessed using HTTP requests (e.g., using Postman or 
 API Endpoints
 The following are the available API endpoints for the CRM Backend:
 
-GET /customers: Get a list of all customers.
+GET /customers: Get a list of all customers. \n
 GET /customers/{id}: Get a single customer by ID.
 POST /customers: Create a new customer.
 PUT /customers/{id}: Update an existing customer by ID.
