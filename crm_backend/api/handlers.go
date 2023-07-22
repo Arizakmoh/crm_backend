@@ -54,7 +54,7 @@ func addCustomer(w http.ResponseWriter, r *http.Request) {
 	//newCustomer.ID = newID
 
 	database.Customers = append(database.Customers, newCustomer)
-
+	w.WriteHeader(http.StatusCreated)
 	json.NewEncoder(w).Encode(newCustomer)
 }
 
