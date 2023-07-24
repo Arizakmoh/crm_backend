@@ -50,9 +50,7 @@ func addCustomer(w http.ResponseWriter, r *http.Request) {
 		return
 	}
 
-	//newID := generateNewID()
-	//newCustomer.ID = newID
-
+	newCustomer.ID = generateNewID()
 	database.Customers = append(database.Customers, newCustomer)
 	w.WriteHeader(http.StatusCreated)
 	json.NewEncoder(w).Encode(newCustomer)
@@ -70,7 +68,7 @@ func updateCustomer(w http.ResponseWriter, r *http.Request) {
 	customerID := params["id"]
 	fmt.Println("Received Update Request", customerID)
 
-	// Fech Customer from Database
+	// Fetch Customer From Database
 	for i, customer := range database.Customers {
 		if customer.ID == customerID {
 			var updatedCustomer dtos.Customer
@@ -80,6 +78,9 @@ func updateCustomer(w http.ResponseWriter, r *http.Request) {
 				fmt.Fprintf(w, `{"error": "Invalid request data"}`)
 				return
 			}
+
+			// Ensure the ID in the request body matches the ID in the URL params
+			updatedCustomer.ID = customerID
 
 			// Update the existing customer in the Database
 			database.Customers[i] = updatedCustomer
