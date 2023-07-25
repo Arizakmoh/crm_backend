@@ -39,4 +39,14 @@ var Customers = []dtos.Customer{
 		Phone:     "612-555-5554",
 		Contacted: false,
 	},
+
+	// Customer 5
+	{
+		ID:        "5",
+		Name:      "Moha Really",
+		Role:      "Customer",
+		Email:     "moha@noemail.com",
+		Phone:     "612-555-5554",
+		Contacted: false,
+	},
 }
